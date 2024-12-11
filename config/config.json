@@ -15,7 +15,7 @@
     "k9": {
         "datasets": {
             "processing": "postpro_k9",
-            "reporting": "prepro_k9"
+            "reporting": "prepro_k99"
         }
     },
     "DataMesh": {
