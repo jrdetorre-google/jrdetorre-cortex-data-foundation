@@ -37,11 +37,11 @@ In the same region, create a bucket for the DAG python code and CDC SQL script a
 * **Clone repository** 
 
 Clone and pull the repo
-
-    git clone https://github.com/jrdetorre-google/jrdetorre-cortex-data-foundation.git
-    cd jrdetorre-cortex-data-foundation
-    git pull
-
+```
+git clone https://github.com/jrdetorre-google/jrdetorre-cortex-data-foundation.git
+cd jrdetorre-cortex-data-foundation
+git pull
+```
 * **Adjust config.json** 
 
 Apply the required values to the config file in [config/config.json](https://github.com/jrdetorre-google/jrdetorre-cortex-data-foundation/blob/main/config/config.json) as it's described in [Cortex Framework: integration with SAP](https://cloud.google.com/cortex/docs/operational-sap).
@@ -55,23 +55,23 @@ The Change Data Capture processing method used here is **Append-always**.
 In order to define the tables to CDC process you must edit the [src/SAP/SAP_CDC/cdc_settings.yaml](https://github.com/jrdetorre-google/jrdetorre-cortex-data-foundation/blob/main/src/SAP/SAP_CDC/cdc_settings.yaml) file including the tables to replicate and the replication frecuency according to the [scheduling options supported by Apache Airflow](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dag-run.html).
 
 ```
-  data_to_replicate:
-    - base_table: adrc
-      load_frequency: "@hourly"
-    - base_table: adr6
-      target_table: adr6_cdc
-      load_frequency: "@daily"
-    - base_table: zztable_customer
-      load_frequency: "@daily"
-    - base_table: zzspecial_table
-      load_frequency: "RUNTIME"
-    - base_table: vbap
-      load_frequency: "@daily"
-      partition_details: {
-        column: "erdat", partition_type: "time", time_grain: "day" }
+data_to_replicate:
+- base_table: adrc
+    load_frequency: "@hourly"
+- base_table: adr6
+    target_table: adr6_cdc
+    load_frequency: "@daily"
+- base_table: zztable_customer
+    load_frequency: "@daily"
+- base_table: zzspecial_table
+    load_frequency: "RUNTIME"
+- base_table: vbap
+    load_frequency: "@daily"
+    partition_details: {
+    column: "erdat", partition_type: "time", time_grain: "day" }
 ```
 
-Optional: If you want to add and process tables individually after deployment, you can modify the [cdc_settings.yaml](https://github.com/jrdetorre-google/jrdetorre-cortex-data-foundation/blob/main/src/SAP/SAP_CDC/cdc_settings.yaml) file to process only the tables you need and re-execute the specified module calling [src/SAP_CDC/cloudbuild.cdc.yaml](https://github.com/jrdetorre-google/jrdetorre-cortex-data-foundation/blob/main/src/SAP/SAP_CDC/cloudbuild.cdc.yaml) directly.
+**Optional:** If you want to add and process tables individually after deployment, you can modify the [cdc_settings.yaml](https://github.com/jrdetorre-google/jrdetorre-cortex-data-foundation/blob/main/src/SAP/SAP_CDC/cdc_settings.yaml) file to process only the tables you need and re-execute the specified module calling [src/SAP_CDC/cloudbuild.cdc.yaml](https://github.com/jrdetorre-google/jrdetorre-cortex-data-foundation/blob/main/src/SAP/SAP_CDC/cloudbuild.cdc.yaml) directly.
 
 dd
 
