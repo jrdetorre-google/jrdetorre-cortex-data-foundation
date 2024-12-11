@@ -1,0 +1,16 @@
+name: "{{ project_id_tgt }}.{{ dataset_reporting_tgt }}.BillingBlockingReasonsMD"
+description: "This view contains the details of billing blocks to the business analyst at the granularity of Client(Mandant), billing block and Language key."
+catalog_tags:
+  - display_name: "line_of_business"
+    fields:
+      - display_name: "group"
+        value: "Master Data"
+fields:
+  - name: "Client_MANDT"
+    description: "Client (Mandant), PK"
+  - name: "LanguageKey_SPRAS"
+    description: "Language Key, PK"
+  - name: "Block_FAKSP"
+    description: "Billing Block, PK"
+  - name: "BillingBlockReason_VTEXT"
+    description: "Billing Block Description"

@@ -1,0 +1,34 @@
+{
+    "testData": true,
+    "deploySFDC": true,
+    "deployDataMesh": true,
+    "turboMode": true,
+    "projectIdSource": "",
+    "projectIdTarget": "",
+    "targetBucket": "",
+    "location": "US",
+    "k9": {
+        "datasets": {
+            "processing": "K9_PROCESSING"
+        }
+    },
+    "DataMesh": {
+        "deployDescriptions": true,
+        "deployLakes": false,
+        "deployCatalog": false,
+        "deployACLs": false
+    },
+    "SFDC": {
+        "deployCDC": true,
+        "createMappingViews": true,
+        "createPlaceholders": true,
+        "currencies": [
+            "USD"
+        ],
+        "datasets": {
+            "cdc": "",
+            "raw": "",
+            "reporting": "REPORTING"
+        }
+    }
+}

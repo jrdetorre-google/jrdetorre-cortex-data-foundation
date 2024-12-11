@@ -1,0 +1,20 @@
+name: "{{ project_id_tgt }}.{{ dataset_reporting_tgt }}.MaterialTypesMD"
+description: "MaterialTypesMD view gives details about different material types and their descriptions at the granularity of Client(System), Material Type and Language Key"
+catalog_tags:
+  - display_name: "line_of_business"
+    fields:
+      - display_name: "group"
+        value: "Master Data"
+fields:
+  - name: "Client_MANDT"
+    description: "Client (Mandant), PK"
+  - name: "MaterialType_MTART"
+    description: "Material Type, PK"
+  - name: "LanguageKey_SPRAS"
+    description: "Language Key, PK"
+  - name: "ReferenceMaterialType_MTREF"
+    description: "Reference Material Type"
+  - name: "ScreenReferenceDependingOnTheMaterialType_MBREF"
+    description: "Screen Reference Depending On The Material Type"
+  - name: "DescriptionOfMaterialType_MTBEZ"
+    description: "Description Of Material Type"
