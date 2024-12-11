@@ -54,6 +54,7 @@ The Change Data Capture processing method used here is **Append-always**.
 
 In order to define the tables to CDC process you must edit the [src/SAP/SAP_CDC/cdc_settings.yaml](https://github.com/jrdetorre-google/jrdetorre-cortex-data-foundation/blob/main/src/SAP/SAP_CDC/cdc_settings.yaml) file including the tables to replicate and the replication frecuency according to the [scheduling options supported by Apache Airflow](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dag-run.html).
 
+```
   data_to_replicate:
     - base_table: adrc
       load_frequency: "@hourly"
@@ -68,6 +69,7 @@ In order to define the tables to CDC process you must edit the [src/SAP/SAP_CDC/
       load_frequency: "@daily"
       partition_details: {
         column: "erdat", partition_type: "time", time_grain: "day" }
+```
 
 Optional: If you want to add and process tables individually after deployment, you can modify the [cdc_settings.yaml](https://github.com/jrdetorre-google/jrdetorre-cortex-data-foundation/blob/main/src/SAP/SAP_CDC/cdc_settings.yaml) file to process only the tables you need and re-execute the specified module calling [src/SAP_CDC/cloudbuild.cdc.yaml](https://github.com/jrdetorre-google/jrdetorre-cortex-data-foundation/blob/main/src/SAP/SAP_CDC/cloudbuild.cdc.yaml) directly.
 
