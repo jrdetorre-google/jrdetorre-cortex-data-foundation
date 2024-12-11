@@ -26,7 +26,7 @@
     },
     "SAP": {
         "deployCDC": true,
-        "SQLFlavor": "ecc",
+        "SQLFlavor": "s4",
         "mandt": "100",
         "languages": [
             "E"

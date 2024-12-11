@@ -42,9 +42,12 @@ Clone and pull the repo
     cd jrdetorre-cortex-data-foundation
     git pull
 
+* **Adjust onfig.json** 
+
+Apply the required values to the config file in [config/config.json](https://github.com/jrdetorre-google/jrdetorre-cortex-data-foundation/blob/main/config/config.json) as it's described in [Cortex Framework: integration with SAP](https://cloud.google.com/cortex/docs/operational-sap).
 
 dd
-    
+
     2. [Clone repository](https://cloud.google.com/cortex/docs/deployment-step-two)
     3. [Determine integration mechanism](https://cloud.google.com/cortex/docs/deployment-step-three)
     4. [Set up components](https://cloud.google.com/cortex/docs/deployment-step-four)
