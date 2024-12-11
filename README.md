@@ -36,12 +36,11 @@ In the same region, create a bucket for the DAG python code and CDC SQL script a
 
 * **Clone repository** 
 
+Clone and pull the repo
+
     git clone https://github.com/jrdetorre-google/jrdetorre-cortex-data-foundation.git
     cd jrdetorre-cortex-data-foundation
     git pull
-
-
-
     2. [Clone repository](https://cloud.google.com/cortex/docs/deployment-step-two)
     3. [Determine integration mechanism](https://cloud.google.com/cortex/docs/deployment-step-three)
     4. [Set up components](https://cloud.google.com/cortex/docs/deployment-step-four)
