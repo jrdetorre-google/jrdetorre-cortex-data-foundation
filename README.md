@@ -36,9 +36,9 @@ In the same region, create a bucket for the DAG python code and CDC SQL script a
 
 * **Clone repository** 
 
-git clone https://github.com/jrdetorre-google/jrdetorre-cortex-data-foundation.git
-cd jrdetorre-cortex-data-foundation
-git pull
+    git clone https://github.com/jrdetorre-google/jrdetorre-cortex-data-foundation.git
+    cd jrdetorre-cortex-data-foundation
+    git pull
 
 
 
