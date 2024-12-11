@@ -87,13 +87,13 @@ data_to_replicate:
     }
     cluster_details: {columns: ["bukrs", "gjahr"]}
   - base_table: afko
-    load_frequency: "@hourly"
+    load_frequency: "RUNTIME"
   - base_table: afpo
-    load_frequency: "@hourly"
+    load_frequency: "RUNTIME"
   - base_table: aufk
-    load_frequency: "@hourly"
+    load_frequency: "*/15 * * * *"
   - base_table: bseg
-    load_frequency: "@hourly"
+    load_frequency: "*/15 * * * *"
     cluster_details: {columns: ["mandt", "bukrs", "gjahr"]}
   - base_table: but000
     load_frequency: "@daily"

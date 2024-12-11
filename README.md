@@ -73,7 +73,11 @@ data_to_replicate:
 
 **Optional:** If you want to add and process tables individually after deployment, you can modify the [cdc_settings.yaml](https://github.com/jrdetorre-google/jrdetorre-cortex-data-foundation/blob/main/src/SAP/SAP_CDC/cdc_settings.yaml) file to process only the tables you need and re-execute the specified module calling [src/SAP_CDC/cloudbuild.cdc.yaml](https://github.com/jrdetorre-google/jrdetorre-cortex-data-foundation/blob/main/src/SAP/SAP_CDC/cloudbuild.cdc.yaml) directly.
 
-dd
+* **Execute deployment** 
+
+
+
+
 
     2. [Clone repository](https://cloud.google.com/cortex/docs/deployment-step-two)
     3. [Determine integration mechanism](https://cloud.google.com/cortex/docs/deployment-step-three)
