@@ -27,13 +27,21 @@ Entity-Relationship Diagrams (ERD) in the [docs](https://github.com/GoogleCloudP
 
 # Deployment
 
-For Cortex Framework deployment instructions, see the following:
+For this specific Cortex Framework deployment instructions, see the following:
 
-*   **Quickstart Demo**: a [quickstart demo](https://cloud.google.com/cortex/docs/quickstart-demo) to
-test the Cortex Framework set up process with sample data within just a few clicks. *This demo deployment
-is not suitable for production environments*.
-*   **Deployment steps**: after reading the [prerequisites](https://cloud.google.com/cortex/docs/deployment-prerequisites) for Cortex Data Foundation deployment, follow the steps for deployment in production environments:
-    1. [Establish workloads](https://cloud.google.com/cortex/docs/deployment-step-one)
+* **Prerequisites** 
+After reading the [prerequisites](https://cloud.google.com/cortex/docs/deployment-prerequisites) for Cortex Data Foundation deployment, create a RAW and a CDC dataset in BigQuery in a selected region following the instructions declared here [Establish workloads](https://cloud.google.com/cortex/docs/deployment-step-one)
+
+In the same region, create a bucket for the DAG python code and CDC SQL script artifacts generated and another bucket for the logs.
+
+* **Clone repository** 
+
+git clone https://github.com/jrdetorre-google/jrdetorre-cortex-data-foundation.git
+cd jrdetorre-cortex-data-foundation
+git pull
+
+
+
     2. [Clone repository](https://cloud.google.com/cortex/docs/deployment-step-two)
     3. [Determine integration mechanism](https://cloud.google.com/cortex/docs/deployment-step-three)
     4. [Set up components](https://cloud.google.com/cortex/docs/deployment-step-four)
