@@ -84,7 +84,9 @@ gcloud builds submit --project EXECUTION_PROJECT\
     --substitutions=_GCS_BUCKET=LOGS_BUCKET
 ```
 
+* **Mover artifacts to Airflow** 
 
+Mo
 
 ## Optional steps
 
