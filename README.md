@@ -75,15 +75,16 @@ data_to_replicate:
 
 * **Execute deployment** 
 
+Replace the EXECUTION_PROJECT with your project id and the LOGS_BUCKET with he bucket name for logs storage. 
+
+```
+cd jrdetorre-cortex-data-foundation
+
+gcloud builds submit --project EXECUTION_PROJECT\
+    --substitutions=_GCS_BUCKET=LOGS_BUCKET
+```
 
 
-
-
-    2. [Clone repository](https://cloud.google.com/cortex/docs/deployment-step-two)
-    3. [Determine integration mechanism](https://cloud.google.com/cortex/docs/deployment-step-three)
-    4. [Set up components](https://cloud.google.com/cortex/docs/deployment-step-four)
-    5. [Configure deployment](https://cloud.google.com/cortex/docs/deployment-step-five)
-    6. [Execute deployment](https://cloud.google.com/cortex/docs/deployment-step-six)
 
 ## Optional steps
 
