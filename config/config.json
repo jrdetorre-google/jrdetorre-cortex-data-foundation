@@ -1,21 +1,21 @@
 {
     "testData": true,
     "deploySAP": true,
-    "deploySFDC": true,
-    "deployMarketing": true,
-    "deployOracleEBS": true,
-    "deployDataMesh": true,
+    "deploySFDC": false,
+    "deployMarketing": false,
+    "deployOracleEBS": false,
+    "deployDataMesh": false,
     "deploySAPMLModels": false,
     "turboMode": true,
-    "projectIdSource": "",
-    "projectIdTarget": "",
-    "targetBucket": "",
-    "location": "US",
+    "projectIdSource": "masorange-cortex-444315",
+    "projectIdTarget": "masorange-cortex-444315",
+    "targetBucket": "masorange-cortex-dags",
+    "location": "europe-west1",
     "testDataProject": "kittycorn-public",
     "k9": {
         "datasets": {
-            "processing": "K9_PROCESSING",
-            "reporting": "K9_REPORTING"
+            "processing": "postpro_k9",
+            "reporting": "prepro_k9"
         }
     },
     "DataMesh": {
@@ -29,17 +29,16 @@
         "SQLFlavor": "ecc",
         "mandt": "100",
         "languages": [
-            "E",
-            "S"
+            "E"
         ],
         "currencies": [
             "USD"
         ],
         "datasets": {
-            "cdc": "",
-            "raw": "",
-            "ml": "ML_MODELS",
-            "reporting": "REPORTING"
+            "cdc": "cortex_cdc",
+            "raw": "cortex_raw",
+            "ml": "cortex_ml",
+            "reporting": "cortex_reporting"
         }
     },
     "SFDC": {

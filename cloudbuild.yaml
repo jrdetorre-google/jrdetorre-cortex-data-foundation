@@ -40,31 +40,31 @@ steps:
       cat ${_CONFIG_FILE}
       echo -e "\n--------------------------------"
 
-  - name: gcr.io/kittycorn-public/deploy-kittycorn:v2.0
-    id: 'k9-pre'
-    waitFor: ['init_deploy_config']
-    script: |
-      #!/usr/bin/env bash
-      export PYTHONPATH=${PYTHONPATH}:src/:.
-      declare -a _WORKER_POOL_OPTIONS
+  # - name: gcr.io/kittycorn-public/deploy-kittycorn:v2.0
+  #   id: 'k9-pre'
+  #   waitFor: ['init_deploy_config']
+  #   script: |
+  #     #!/usr/bin/env bash
+  #     export PYTHONPATH=${PYTHONPATH}:src/:.
+  #     declare -a _WORKER_POOL_OPTIONS
 
-      if [[ -n "${_WORKER_POOL_NAME}" ]]; then
-        _WORKER_POOL_OPTIONS+=(--worker-pool-name "${_WORKER_POOL_NAME}")
-      fi
+  #     if [[ -n "${_WORKER_POOL_NAME}" ]]; then
+  #       _WORKER_POOL_OPTIONS+=(--worker-pool-name "${_WORKER_POOL_NAME}")
+  #     fi
 
-      if [[ -n "${_CLOUD_BUILD_REGION}" ]]; then
-        _WORKER_POOL_OPTIONS+=(--region "${_CLOUD_BUILD_REGION}")
-      fi
+  #     if [[ -n "${_CLOUD_BUILD_REGION}" ]]; then
+  #       _WORKER_POOL_OPTIONS+=(--region "${_CLOUD_BUILD_REGION}")
+  #     fi
 
-      if [[ -n "${_BUILD_ACCOUNT}" ]]; then
-        _WORKER_POOL_OPTIONS+=(--build-account "${_BUILD_ACCOUNT}")
-      fi
+  #     if [[ -n "${_BUILD_ACCOUNT}" ]]; then
+  #       _WORKER_POOL_OPTIONS+=(--build-account "${_BUILD_ACCOUNT}")
+  #     fi
 
-      python3 src/k9/src/deploy_k9.py \
-            --config-file "${_CONFIG_FILE}" \
-            --stage pre \
-            --logs-bucket "${_GCS_BUCKET}" \
-            "${_WORKER_POOL_OPTIONS[@]}"
+  #     python3 src/k9/src/deploy_k9.py \
+  #           --config-file "${_CONFIG_FILE}" \
+  #           --stage pre \
+  #           --logs-bucket "${_GCS_BUCKET}" \
+  #           "${_WORKER_POOL_OPTIONS[@]}"
 
   - name: gcr.io/kittycorn-public/deploy-kittycorn:v2.0
     id: 'sap-test-harness'
