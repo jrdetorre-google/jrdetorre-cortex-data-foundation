@@ -89,8 +89,8 @@ gcloud builds submit --project EXECUTION_PROJECT\
 Move the dags and the data folders of the Cortex CDC Generator artifacts output bucket to the Composer Airflow DAGs bucket:
 
 ```
-  gcloud storage -m cp -r  gs://OUTPUT_BUCKET/dags/ gs://COMPOSER_DAG_BUCKET/
-  gcloud storage -m cp -r  gs://OUTPUT_BUCKET/data/ gs://COMPOSER_DAG_BUCKET/
+  gcloud storage cp -r  gs://OUTPUT_BUCKET/dags/ gs://COMPOSER_DAG_BUCKET/
+  gcloud storage cp -r  gs://OUTPUT_BUCKET/data/ gs://COMPOSER_DAG_BUCKET/
 
 ```
 
